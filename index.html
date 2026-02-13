@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NEXO App | Prototipo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; -webkit-tap-highlight-color: transparent; }
+        .nav-blur { backdrop-filter: blur(15px); background: rgba(15, 23, 42, 0.8); }
+        .card-action { transition: transform 0.1s; }
+        .card-action:active { transform: scale(0.97); }
+        .safe-area-bottom { padding-bottom: calc(env(safe-area-inset-bottom) + 80px); }
+    </style>
+</head>
+<body class="text-slate-200">
+
+    <header class="sticky top-0 z-50 nav-blur border-b border-slate-800 p-4 flex justify-between items-center">
+        <div>
+            <h1 class="text-xl font-bold text-blue-400 tracking-tighter">NEXO</h1>
+            <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Admin Console</p>
+        </div>
+        <div class="flex items-center gap-3">
+            <div class="h-2 w-2 bg-emerald-500 rounded-full animate-pulse"></div>
+            <i class="fas fa-bell text-slate-400"></i>
+            <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center border border-slate-600">
+                <i class="fas fa-user text-xs"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="p-4 space-y-6 safe-area-bottom">
+
+        <section class="bg-gradient-to-br from-blue-600 to-blue-800 p-6 rounded-3xl shadow-xl shadow-blue-900/20">
+            <h2 class="text-white text-lg font-medium opacity-90">Hola, Fundador</h2>
+            <p class="text-3xl font-bold text-white mt-1">Tu Startup NEXO</p>
+            <div class="mt-6 grid grid-cols-2 gap-3">
+                <div class="bg-white/10 p-3 rounded-2xl backdrop-blur-md">
+                    <p class="text-[10px] text-blue-200 uppercase font-bold">Objetivo Fase 1</p>
+                    <p class="text-lg font-bold text-white">3 Edificios</p>
+                </div>
+                <div class="bg-white/10 p-3 rounded-2xl backdrop-blur-md">
+                    <p class="text-[10px] text-blue-200 uppercase font-bold">Eficiencia IA</p>
+                    <p class="text-lg font-bold text-white">x5 Capacidad</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-sm font-bold text-slate-500 mb-4 uppercase tracking-wider">Hoja de Ruta Activa</h3>
+            <div class="space-y-3">
+                <div class="card-action bg-slate-800/50 border border-slate-700 p-4 rounded-2xl flex items-center gap-4">
+                    <div class="bg-blue-500/20 text-blue-400 w-10 h-10 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Prototipo Visual</h4>
+                        <p class="text-xs text-slate-400 text-emerald-400">Completado: Estás viendo esto ahora.</p>
+                    </div>
+                </div>
+                <div class="card-action bg-slate-800/50 border border-slate-700 p-4 rounded-2xl flex items-center gap-4 opacity-60">
+                    <div class="bg-slate-700 text-slate-400 w-10 h-10 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Validación con Socios</h4>
+                        <p class="text-xs text-slate-400">Próximo: Mostrar web a testers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-sm font-bold text-slate-500 mb-4 uppercase tracking-wider">Tu Equipo Digital (IA)</h3>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-slate-800 border border-slate-700 p-4 rounded-2xl">
+                    <i class="fas fa-comment-dots text-blue-400 mb-2"></i>
+                    <h5 class="text-sm font-bold text-white">Agente Tickets</h5>
+                    <p class="text-[11px] text-slate-400 leading-tight">Maneja reclamos 24/7 sin que vos atiendas.</p>
+                </div>
+                <div class="bg-slate-800 border border-slate-700 p-4 rounded-2xl">
+                    <i class="fas fa-file-invoice-dollar text-emerald-400 mb-2"></i>
+                    <h5 class="text-sm font-bold text-white">Agente Cuentas</h5>
+                    <p class="text-[11px] text-slate-400 leading-tight">Audita facturas y expensas al instante.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-800/30 border border-dashed border-slate-700 p-5 rounded-3xl text-center">
+            <h3 class="font-bold text-white mb-2">¿Por qué esto funciona?</h3>
+            <p class="text-sm text-slate-400">El administrador común es un <b>cuello de botella</b>. NEXO es una <b>autopista</b> de información transparente.</p>
+            <button class="mt-4 bg-slate-700 hover:bg-slate-600 px-6 py-2 rounded-full text-xs font-bold transition-all">Ver Comparativa Full</button>
+        </section>
+
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 nav-blur border-t border-slate-800 p-4 pb-6 flex justify-around items-center">
+        <button class="flex flex-col items-center gap-1 text-blue-400">
+            <i class="fas fa-home"></i>
+            <span class="text-[10px] font-medium">Inicio</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-500">
+            <i class="fas fa-chart-line"></i>
+            <span class="text-[10px] font-medium">Negocio</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-500">
+            <i class="fas fa-tools"></i>
+            <span class="text-[10px] font-medium">Tech</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-slate-500">
+            <i class="fas fa-cog"></i>
+            <span class="text-[10px] font-medium">Ajustes</span>
+        </button>
+    </nav>
+
+</body>
+</html>
